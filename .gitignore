@@ -18,3 +18,4 @@ web/.htaccess
 # Composer
 vendor/*
 !vendor/.gitkeep
+.htaccess

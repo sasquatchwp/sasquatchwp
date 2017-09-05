@@ -1,0 +1,13 @@
+{% extends "/layouts/base.twig" %}
+
+{% block content %}
+
+<div class="row" data-equalizer>
+  {% for post in posts %}
+  <div class="large-6 columns" data-equalizer-watch>
+    <h2>{{ post.title }} :)</h2>
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

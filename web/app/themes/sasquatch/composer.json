@@ -1,0 +1,6 @@
+{
+    "require": {
+        "timber/timber": "^1.3",
+        "soberwp/intervention": "1.2.0-p"
+    }
+}

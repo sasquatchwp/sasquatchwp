@@ -1,28 +1,19 @@
 {
-  "name": "roots/bedrock",
+  "name": "spidersAgency/SasquatchWP_starter",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "description": "Sasquatch WP boilerplate",
+  "homepage": "https://spiders.agency",
   "authors": [
     {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
+      "name": "Maciej Palmowski",
+      "email": "m.palmowski@spiders.agency",
+      "homepage": "https://pandify.pl"
     }
   ],
   "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    "bedrock", "roots", "wordpress", "stack", "composer", "wp", "timber"
   ],
-  "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
-  },
   "config": {
     "preferred-install": "dist"
   },
@@ -50,7 +41,7 @@
   ],
   "require": {
     "php": ">=5.6",
-    "composer/installers": "~1.2.0",
+    "composer/installers": "~1.0.25",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "4.8.1",
     "oscarotero/env": "^1.1.0",
@@ -62,7 +53,7 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/google-analytics-for-wordpress":"*",
     "wpackagist-plugin/regenerate-thumbnails":"*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
