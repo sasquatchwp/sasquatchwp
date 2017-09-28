@@ -2,7 +2,7 @@
 function setup() {
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
-  load_theme_textdomain( 'sage', get_template_directory() . '/lang' );
+  load_theme_textdomain( 'sasquatch', get_template_directory() . '/lang' );
 
   // Enable plugins to manage the document title
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
@@ -36,20 +36,18 @@ add_action( 'after_setup_theme', 'setup' );
  */
 
 function assets() {
-  wp_enqueue_style('sage/css', asset_path( 'css/app.css' ), false, null);
+  wp_enqueue_style( 'sasquatch/css', asset_path( 'css/app.css' ), false, null);
 
   if (is_single() && comments_open() && get_option( 'thread_comments' )) {
     wp_enqueue_script( 'comment-reply' );
   }
 
-  wp_enqueue_script( 'sage/js', asset_path( 'js/app.js' ), ['jquery'], null, true);
-  //wp_enqueue_script('livehelpnow', 'http://www.livehelpnow.net/lhn/widgets/chatbutton/lhnchatbutton-current.min.js', false, null);
-
+  wp_enqueue_script( 'sasquatch/js', asset_path( 'js/app.js' ), ['jquery'], null, true);
 }
 add_action( 'wp_enqueue_scripts', 'assets', 100 );
 
 // ACF Sync Fields
-add_filter('acf/settings/save_json', 'acf_json_save_point');
+add_filter( 'acf/settings/save_json', 'acf_json_save_point' );
 
 function acf_json_save_point( $path ) {
     // update path
@@ -59,7 +57,7 @@ function acf_json_save_point( $path ) {
     return $path;
 }
 
-add_filter('acf/settings/load_json', 'acf_json_load_point');
+add_filter( 'acf/settings/load_json', 'acf_json_load_point' );
 
 function acf_json_load_point( $paths ) {
     // remove original path (optional)

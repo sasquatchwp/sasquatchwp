@@ -2,7 +2,7 @@
 
 @import 'settings';
 @import 'foundation-sites/scss/foundation';
-@import 'motion-ui/src/motion-ui';
+@import 'font-awesome/scss/font-awesome';
 @import 'magnific-popup/src/css/main';
 @import 'flickity/dist/flickity.min';
 
@@ -50,6 +50,3 @@
 @include foundation-flex-classes;
 
 // @include foundation-prototype-classes;
-
-@include motion-ui-transitions;
-//@include motion-ui-animations;
