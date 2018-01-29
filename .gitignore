@@ -19,3 +19,4 @@ web/.htaccess
 vendor/*
 !vendor/.gitkeep
 .htaccess
+composer.lock
