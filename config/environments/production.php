@@ -5,3 +5,7 @@ define('WP_DEBUG_DISPLAY', false);
 define('SCRIPT_DEBUG', false);
 /** Disable all file modifications including updates and update notifications */
 define('DISALLOW_FILE_MODS', true);
+// autosave
+define('AUTOSAVE_INTERVAL', 300); // seconds
+// post revisions
+define('WP_POST_REVISIONS', 3);
