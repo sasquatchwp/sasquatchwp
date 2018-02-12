@@ -81,3 +81,7 @@ define('DISALLOW_FILE_EDIT', true);
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
+    $_SERVER['HTTPS']='on';
+}
