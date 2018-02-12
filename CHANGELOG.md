@@ -1,3 +1,8 @@
+### 1.0.4
+* WP version bump
+* https endless loop fix
+* 3 revision on productions
+
 ### 1.0.3
 
 * Updated node-sass
