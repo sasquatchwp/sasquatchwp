@@ -1,6 +1,6 @@
 {
   "name": "sasquatch-wp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Foundation and Timber for WordPress",
   "main": "gulpfile.js",
   "scripts": {
