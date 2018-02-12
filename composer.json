@@ -1,6 +1,7 @@
 {
   "name": "spidersAgency/SasquatchWP_starter",
   "type": "project",
+  "version": "1.0.4",
   "license": "MIT",
   "description": "Sasquatch WP boilerplate",
   "homepage": "https://spiders.agency",
