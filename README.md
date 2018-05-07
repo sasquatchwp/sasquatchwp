@@ -1,4 +1,6 @@
-![](sasquatch%20logo.png)
+<p align="center">
+  <img src="sasquatch%20logo.png">
+</p>
 
 # Sasquatch WP - starter pack
 ## Description
