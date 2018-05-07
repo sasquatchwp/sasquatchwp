@@ -1,3 +1,5 @@
+![](sasquatch%20logo.png)
+
 # Sasquatch WP - starter pack
 ## Description
 This is **SasquatchWP** with all WordPress plugins and some JS that are used in almost every project by Spiders.Agency.
