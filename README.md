@@ -26,8 +26,6 @@ and a little magic to keep it all together.
 
 Remember to change `DEVURL` in `web/app/themes/{theme_name}/config.yml`
 
-If you want to use ACF PRO add your key to `.env` - read more on https://github.com/PhilippBaschke/acf-pro-installer.
-
 ## Usage
 `npm run build` - run all tasks form production
 `npm start` - run tasks in watch mode
