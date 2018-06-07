@@ -1,3 +1,6 @@
+### 1.1.0
+* Removed all unnesessary plugins and libs
+
 ### 1.0.5
 * Version bump
 * Stable gulp
