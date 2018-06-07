@@ -1,7 +1,7 @@
 {
   "name": "spidersAgency/SasquatchWP_starter",
   "type": "project",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "description": "Sasquatch WP boilerplate",
   "homepage": "https://spiders.agency",
@@ -23,7 +23,7 @@
      "type": "package",
      "package": {
        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-       "version": "5.6.7",
+       "version": "5.6.10",
        "type": "wordpress-plugin",
        "dist": {
          "type": "zip",
@@ -44,7 +44,7 @@
     "php": ">=5.6",
     "composer/installers": "~1.0.25",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9.4",
+    "johnpbloch/wordpress": "4.9.6",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wp-sync-db/wp-sync-db": "dev-master",
@@ -54,7 +54,8 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/google-analytics-for-wordpress":"*",
     "wpackagist-plugin/regenerate-thumbnails":"*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "soberwp/models": "1.0.6"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"

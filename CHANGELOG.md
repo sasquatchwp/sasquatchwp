@@ -1,3 +1,8 @@
+### 1.0.5
+* Version bump
+* Stable gulp
+* Using Models
+
 ### 1.0.4
 * WP version bump
 * https endless loop fix
