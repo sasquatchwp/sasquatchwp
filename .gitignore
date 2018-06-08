@@ -5,6 +5,9 @@ web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
+web/app/w3tc-config
+package-lock.json
+composer.lock
 
 # WordPress
 web/wp
