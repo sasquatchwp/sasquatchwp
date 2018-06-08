@@ -1,3 +1,6 @@
+### 1.1.1
+* Gitingore fix
+
 ### 1.1.0
 * Removed all unnesessary plugins and libs
 
