@@ -17,7 +17,7 @@ It's the mix of:
 and a little magic to keep it all together.
 
 ## Instalation
-1. `git clone https://github.com/spidersAgency/SasquatchWP_starter.git .`
+1. `git clone https://github.com/SasquatchWP/SasquatchWP.git .`
 2. `composer install`
 3. Change theme name in `web/app/themes/sasquatch`
 4. `cd web/app/themes/{theme_name}`
