@@ -1,3 +1,7 @@
+### 1.2.0
+* New gulp tasks - es-lint, sass-lint and audit
+* Some changes in sass gulp task
+
 ### 1.1.2
 * WordPress version bump
 * Bedrock changes included

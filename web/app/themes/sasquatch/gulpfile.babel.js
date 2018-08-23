@@ -44,6 +44,36 @@ gulp.task('build',
 gulp.task('default',
   gulp.series('build', server, watch));
 
+gulp.task('audit', gulp.series('build', function(done) {
+  fs.readFile(PATHS.cssfile, function(err, data) {
+    var parker = new Parker(require('parker/metrics/All'));
+    var results = parker.run(data.toString());
+    console.log(prettyJSON.render(results));
+    done();
+  });
+}));
+
+// SASS linting - configuration file .sass-lint-yml
+gulp.task('sassLint', function() {
+  return gulp.src('assets/scss/**/*.scss')
+  .pipe(sassLint({
+    config: './.sass-lint.yml'
+  }))
+  .pipe(sassLint.format())
+  .pipe(sassLint.failOnError());
+});
+
+// JS linting - configuration file .eslintrc
+gulp.task('esLint', function() {
+  return gulp.src('assets/js/**/*.js')
+  .pipe(eslint({
+    useEslintrc: true,
+    configFile: '.eslintrc'
+  }))
+  .pipe(eslint.format())
+  .pipe(eslint.failAfterError());
+});
+
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
@@ -95,34 +125,6 @@ function sass() {
     .pipe(gulp.dest(PATHS.dist + '/css'))
     .pipe(browser.reload({ stream: true }));
 }
-
-gulp.task('audit', gulp.series('build', function(done) {
-  fs.readFile(PATHS.cssfile, function(err, data) {
-    var parker = new Parker(require('parker/metrics/All'));
-    var results = parker.run(data.toString());
-    console.log(prettyJSON.render(results));
-    done();
-  });
-}));
-
-gulp.task('sassLint', function() {
-  return gulp.src('assets/scss/**/*.scss')
-  .pipe(sassLint({
-    config: './.sass-lint.yml'
-  }))
-  .pipe(sassLint.format())
-  .pipe(sassLint.failOnError());
-});
-
-gulp.task('esLint', function() {
-  return gulp.src('assets/js/**/*.js')
-  .pipe(eslint({
-    useEslintrc: true,
-    configFile: '.eslintrc'
-  }))
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError());
-});
 
 let webpackConfig = {
   rules: [
