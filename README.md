@@ -28,13 +28,13 @@ and a little magic to keep it all together.
 Remember to change `DEVURL` in `web/app/themes/{theme_name}/config.yml`
 
 ## Usage
-`npm run build` - run all tasks for production
-`npm run development` - run all tasks for development (sitemaps etc)
-`npm start` - run tasks in watch mode
+* `npm run build` - run all tasks for production
+* `npm run development` - run all tasks for development (sitemaps etc)
+* `npm start` - run tasks in watch mode
 
-`npm es-lint` - runs javascript lint - to change configuration look at `.browserslistrc`
-`npm sass-lint` - runs sass lint - to change configuration look at `.sass-lint.yml`
-`npm audit` - runs Parker audit
+* `npm es-lint` - runs javascript lint - to change configuration look at `.browserslistrc`
+* `npm sass-lint` - runs sass lint - to change configuration look at `.sass-lint.yml`
+* `npm audit` - runs Parker audit
 
 ## Where is it used
 - https://bezprawnik.pl - one of the biggest law blogs in Poland
