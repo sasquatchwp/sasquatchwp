@@ -1,6 +1,6 @@
 import $ from 'jquery';
-import whatInput from 'what-input';
-import foundation from './lib/foundation-explicit-pieces.js';
+import 'what-input';
+import './lib/foundation-explicit-pieces.js';
 import Router from './lib/router';
 
 // Routes

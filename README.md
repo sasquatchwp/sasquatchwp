@@ -4,15 +4,16 @@
 
 # Sasquatch WP - starter pack
 ## Description
-This is **SasquatchWP** with all WordPress plugins and some JS that are used in almost every project by Spiders.Agency.
+This is **SasquatchWP** starter stack. 
 
 ### What is SasquatchWP?
 It's the mix of:
-- SasquatchWP - https://github.com/pandify/SasquatchWP
 - Bedrock - https://github.com/timber/timber
 - Zurb Foundation - https://github.com/zurb/foundation-sites
 - Timber - https://github.com/timber/timber
 - SoberWP Intervention - https://github.com/soberwp/intervention
+- SoberWP Models - https://github.com/soberwp/models
+
 
 and a little magic to keep it all together.
 
@@ -27,5 +28,18 @@ and a little magic to keep it all together.
 Remember to change `DEVURL` in `web/app/themes/{theme_name}/config.yml`
 
 ## Usage
-`npm run build` - run all tasks form production
-`npm start` - run tasks in watch mode
+* `npm run build` - run all tasks for production
+* `npm run development` - run all tasks for development (sitemaps etc)
+* `npm start` - run tasks in watch mode
+
+* `npm es-lint` - runs javascript lint - to change configuration look at `.browserslistrc`
+* `npm sass-lint` - runs sass lint - to change configuration look at `.sass-lint.yml`
+* `npm audit` - runs Parker audit
+
+## Where is it used
+- https://bezprawnik.pl - one of the biggest law blogs in Poland
+- https://autoblog.pl - fast growing polish automobile service
+- https://wrc.net.pl - biggest racing site in Poland
+- https://liberte.pl - selection of best articles from around the world
+
+If you are using SasquatchWP contact me at m.palmowski@freshpixels.pl.

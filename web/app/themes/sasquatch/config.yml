@@ -1,12 +1,6 @@
 # Your project's server will run on localhost:xxxx at this port
 DEVURL: 'http://localhost/sasquatch'
 
-# Autoprefixer will make sure your CSS works with these browsers
-COMPATIBILITY:
-  - "last 2 versions"
-  - "ie >= 9"
-  - "ios >= 7"
-
 # Gulp will reference these paths when it copies files
 PATHS:
   # Path to dist folder
@@ -22,3 +16,6 @@ PATHS:
   # TODO:  Rework this using webpack build. Right now just verifying the files are being built properly
   entries:
     - "assets/js/app.js"
+  
+  cssfile:
+    - "./dist/css/app.css"
