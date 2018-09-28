@@ -1,3 +1,12 @@
+### 1.2.0
+* New gulp tasks - es-lint, sass-lint and audit
+* Some changes in sass gulp task
+
+### 1.1.2
+* WordPress version bump
+* Bedrock changes included
+* Sober Models version bump
+
 ### 1.1.1
 * Gitingore fix
 
@@ -10,7 +19,7 @@
 * Using Models
 
 ### 1.0.4
-* WP version bump
+* WordPress version bump
 * https endless loop fix
 * 3 revision on productions
 
