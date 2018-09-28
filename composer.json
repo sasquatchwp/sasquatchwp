@@ -1,7 +1,7 @@
 {
   "name": "SasquatchWP/SasquatchWP_starter",
   "type": "project",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "license": "MIT",
   "description": "Starter stack for WordPress - mix of Foundation, Bedrock and some magic ",
   "homepage": "https://github.com/SasquatchWP/SasquatchWP",
