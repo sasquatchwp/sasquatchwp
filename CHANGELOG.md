@@ -1,3 +1,7 @@
+### 1.2.1
+* Added theme screenshot 
+* Fixed a small bug in `application.php`
+
 ### 1.2.0
 * New gulp tasks - es-lint, sass-lint and audit
 * Some changes in sass gulp task
