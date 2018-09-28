@@ -86,7 +86,7 @@ Config::define('AUTOSAVE_INTERVAL',300);
 // Revisions
 Config::define('WP_POST_REVISIONS', 3);
 // Set default themes to web/app
-define('WP_DEFAULT_THEME', CONTENT_DIR . '/themes');
+Config::define('WP_DEFAULT_THEME', Config::get('CONTENT_DIR') . '/themes');
 
 /**
  * Debugging Settings
