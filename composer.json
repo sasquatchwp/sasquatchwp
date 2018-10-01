@@ -1,7 +1,7 @@
 {
   "name": "SasquatchWP/SasquatchWP_starter",
   "type": "project",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "license": "MIT",
   "description": "Starter stack for WordPress - mix of Foundation, Bedrock and some magic ",
   "homepage": "https://github.com/SasquatchWP/SasquatchWP",
@@ -22,6 +22,10 @@
     { 
       "type": "composer", 
       "url": "https://wpackagist.org" 
+    },
+    { 
+      "type": "vcs", 
+      "url": "https://github.com/palmiak/models.git" 
     } 
   ],
   "require": {
