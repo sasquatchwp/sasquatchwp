@@ -1,3 +1,6 @@
+### 1.2.2
+* Changed soberwp/models to palmiak's fork with better backward compatibility
+
 ### 1.2.1
 * Added theme screenshot 
 * Fixed a small bug in `application.php`
