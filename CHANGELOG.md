@@ -1,3 +1,7 @@
+### 1.2.3
+* Readme fix - added a step about `.env`, `.htaccess` and `vhost`.
+* Correct branch name for Sober
+
 ### 1.2.2
 * Changed soberwp/models to palmiak's fork with better backward compatibility
 
