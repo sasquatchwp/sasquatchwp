@@ -19,13 +19,57 @@ and a little magic to keep it all together.
 
 ## Instalation
 1. `git clone https://github.com/SasquatchWP/SasquatchWP.git .`
-2. `composer install`
-3. Change theme name in `web/app/themes/sasquatch`
-4. `cd web/app/themes/{theme_name}`
-5. `npm install`
-6. `composer install`
+2. Rename `.env.example` to `.env` and fill it with correct data (database name, password etc)
+3. Prepare [.htaccess](#htaccess) or [vhost](#vhost) 
+4. `composer install`
+5. Change theme name in `web/app/themes/sasquatch`
+6. `cd web/app/themes/{theme_name}`
+7. `npm install`
+8. `composer install`
 
 Remember to change `DEVURL` in `web/app/themes/{theme_name}/config.yml`
+
+## .htaccess
+This is universal `.htaccess` you can use fot shared hosting.
+
+Example for domains (domain.test)
+```
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
+RewriteCond %{REQUEST_URI} !^/web/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /web/$1
+RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
+RewriteRule ^(/)?$ web/index.php [L]
+```
+
+Example for subfolders (domain.test/subfolder)
+```
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
+RewriteCond %{REQUEST_URI} !^/subfolder/web/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /subfolder/web/$1
+RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
+RewriteRule ^(/)?$ web/index.php [L]
+```
+
+## vhost
+Set your site vhost document root to /path/to/site/web/
+
+Example
+```
+<VirtualHost *:80>
+	ServerName domain.test
+	DocumentRoot "/path/to/site/web"
+	<Directory  "/path/to/site/">
+		Options +Indexes +Includes +FollowSymLinks +MultiViews
+		AllowOverride All
+	</Directory>
+</VirtualHost>
+```
 
 ## Usage
 * `npm run build` - run all tasks for production
