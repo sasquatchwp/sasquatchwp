@@ -8,7 +8,7 @@ This is **SasquatchWP** starter stack.
 
 ### What is SasquatchWP?
 It's the mix of:
-- Bedrock - https://github.com/timber/timber
+- Bedrock - https://roots.io/bedrock/
 - Zurb Foundation - https://github.com/zurb/foundation-sites
 - Timber - https://github.com/timber/timber
 - SoberWP Intervention - https://github.com/soberwp/intervention
