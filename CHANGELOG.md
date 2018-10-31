@@ -1,3 +1,7 @@
+### 1.2.4
+* Foundation 6.5.0 Compatibility
+* Removed the duplicate title tag from `base.twig`
+
 ### 1.2.3
 * Readme fix - added a step about `.env`, `.htaccess` and `vhost`.
 * Correct branch name for Sober
