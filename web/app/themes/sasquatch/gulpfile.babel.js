@@ -45,7 +45,7 @@ gulp.task('default',
   gulp.series('build', server, watch));
 
 gulp.task('audit', gulp.series('build', function(done) {
-  fs.readFile(PATHS.cssfile, function(err, data) {
+  fs.readFile(PATHS.cssfile[0], function(err, data) {
     var parker = new Parker(require('parker/metrics/All'));
     var results = parker.run(data.toString());
     console.log(prettyJSON.render(results));

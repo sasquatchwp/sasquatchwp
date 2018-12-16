@@ -1,7 +1,7 @@
 {
   "name": "SasquatchWP/SasquatchWP_starter",
   "type": "project",
-  "version": "1.2.2",
+  "version": "1.2.5",
   "license": "MIT",
   "description": "Starter stack for WordPress - mix of Foundation, Bedrock and some magic ",
   "homepage": "https://github.com/SasquatchWP/SasquatchWP",
@@ -22,17 +22,13 @@
     { 
       "type": "composer", 
       "url": "https://wpackagist.org" 
-    },
-    { 
-      "type": "vcs", 
-      "url": "https://github.com/palmiak/models.git" 
-    } 
+    }
   ],
   "require": {
     "php": ">=5.6",
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "4.9.8",
+    "roots/wordpress": "5.0.1",
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-config": "1.0.0",

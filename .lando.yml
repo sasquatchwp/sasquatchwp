@@ -1,0 +1,24 @@
+name: sasquatch
+recipe: wordpress
+proxy:                
+  nginx:              
+    - sasquatch.local
+  theme:
+    - localhost:3000
+config:
+  php: '7.2'
+  via: nginx
+  webroot: web
+  database: mariadb
+  xdebug: true
+
+services:
+  theme:
+    type: node
+    overrides:
+      services:
+        ports:
+          - 3000:3000
+tooling:
+  npm:
+    service: theme

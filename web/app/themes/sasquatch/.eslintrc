@@ -10,7 +10,7 @@
   },
   "globals": {
     "Foundation": true
-    },
+  },
   "parserOptions": {
     "ecmaFeatures": {
       "impliedStrict": true,
