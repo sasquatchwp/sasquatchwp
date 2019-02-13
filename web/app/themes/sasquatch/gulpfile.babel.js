@@ -45,7 +45,7 @@ gulp.task('default',
   gulp.series('build', server, watch));
 
 gulp.task('audit', gulp.series('build', function(done) {
-  fs.readFile(PATHS.cssfile[0], function(err, data) {
+  fs.readFile(PATHS.cssfile, function(err, data) {
     var parker = new Parker(require('parker/metrics/All'));
     var results = parker.run(data.toString());
     console.log(prettyJSON.render(results));
@@ -120,6 +120,9 @@ function sass() {
     .pipe($.sass({
       includePaths: PATHS.sass
     }).on('error', $.sass.logError))
+      .on('error', () => {
+        if (PRODUCTION){ throw new Error('Errors in SASS build.') }
+    })
     .pipe($.postcss([autoprefixer()])) // uses ".browserslistrc"
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/css'))
@@ -191,4 +194,4 @@ function watch() {
   gulp.watch('**/*.php').on('all', gulp.series(browser.reload));
   gulp.watch('**/*.twig').on('all', gulp.series(browser.reload));
 
-}
+} 
