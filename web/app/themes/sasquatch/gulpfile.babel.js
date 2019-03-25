@@ -118,7 +118,8 @@ function sass() {
     .pipe($.sourcemaps.init())
     .pipe($.plumber())
     .pipe($.sass({
-      includePaths: PATHS.sass
+      includePaths: PATHS.sass,
+      outputStyle: 'compressed'
     }).on('error', $.sass.logError))
       .on('error', () => {
         if (PRODUCTION){ throw new Error('Errors in SASS build.') }
