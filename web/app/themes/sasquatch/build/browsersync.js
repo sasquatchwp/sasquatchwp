@@ -22,7 +22,7 @@ const { COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS, DEVURL } = loadConfig();
 // Start a server with BrowserSync to preview the site in
 export function server(done) {
   browser.init({
-    files: ['{lib,templates}/**/*.php', '*.php'],
+    files: ['{lib,views}/**/*.php', '*.php'],
     proxy: DEVURL,
     snippetOptions: {
       whitelist: ['/wp-admin/admin-ajax.php'],
@@ -44,6 +44,5 @@ export function watch() {
   gulp.watch('assets/scss/**/*.scss').on('all', sass);
   gulp.watch('assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('assets/images/**/*').on('all', gulp.series(images, browser.reload));
-  gulp.watch('**/*.php').on('all', gulp.series(browser.reload));
-  gulp.watch('**/*.twig').on('all', gulp.series(browser.reload));
+  gulp.watch('views/**/*.twig').on('all', gulp.series(browser.reload));
 } 
