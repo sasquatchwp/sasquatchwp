@@ -19,7 +19,7 @@ and a little magic to keep it all together.
 
 ## Instalation
 1. `git clone https://github.com/SasquatchWP/SasquatchWP.git .`
-2. Rename `.env.example` to `.env` and fill it with correct data (database name, password etc)
+2. Rename `.env.example` to `.env` and fill it with correct data (database name, password etc) - remember to add salts from [here](https://roots.io/salts.html)
 3. Prepare [.htaccess](#htaccess) or [vhost](#vhost) 
 4. `composer install`
 5. Change theme name in `web/app/themes/sasquatch`
