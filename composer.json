@@ -16,7 +16,8 @@
     "bedrock", "roots", "wordpress", "stack", "composer", "wp", "timber"
   ],
   "config": {
-    "preferred-install": "dist"
+    "preferred-install": "dist",
+    "process-timeout": 0
   },
   "repositories": [ 
     { 
@@ -32,7 +33,7 @@
     "oscarotero/env": "^1.1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/wp-config": "1.0.0",
-    "soberwp/models": "1.0.6"
+    "soberwp/models": "dev-master"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.0.0",
@@ -52,6 +53,10 @@
     ],
     "test": [
       "vendor/bin/phpcs"
+    ],
+    "installer": [
+      "cd web/app/themes/sasquatch && npm install && npm run build",
+      "cd web/app/themes/sasquatch && composer update"
     ]
   }
 }
