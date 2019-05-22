@@ -34,6 +34,14 @@ This is universal `.htaccess` you can use fot shared hosting.
 
 Example for domains (domain.test)
 ```
+<Files ~ '\.(env|json|config.js|md|gitignore|gitattributes|lock)$'>
+    Order allow,deny
+    Deny from all
+</Files>
+<Files ~ '(composer.json|test.html)$'>
+    Order allow,deny
+    Deny from all
+</Files>
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
 RewriteCond %{REQUEST_URI} !^/web/
@@ -44,6 +52,14 @@ RewriteRule ^(/)?$ web/index.php [L]
 
 Example for subfolders (domain.test/subfolder)
 ```
+<Files ~ '\.(env|json|config.js|md|gitignore|gitattributes|lock)$'>
+    Order allow,deny
+    Deny from all
+</Files>
+<Files ~ '(composer.json|test.html)$'>
+    Order allow,deny
+    Deny from all
+</Files>
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
 RewriteCond %{REQUEST_URI} !^/subfolder/web/
