@@ -37,8 +37,6 @@ Example for domains (domain.test)
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
 RewriteCond %{REQUEST_URI} !^/web/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /web/$1
 RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
 RewriteRule ^(/)?$ web/index.php [L]
@@ -49,8 +47,6 @@ Example for subfolders (domain.test/subfolder)
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
 RewriteCond %{REQUEST_URI} !^/subfolder/web/
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /subfolder/web/$1
 RewriteCond %{HTTP_HOST} ^(www.)?domain.test$
 RewriteRule ^(/)?$ web/index.php [L]
