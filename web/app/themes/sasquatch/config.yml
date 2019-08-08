@@ -9,6 +9,13 @@ PATHS:
   assets:
     - "assets/**/*"
     - "!assets/{img,js,scss}/**/*"
+  # Path to sass files
+  scss: "assets/scss/**/*.scss"
+  # Path to js files
+  js: "assets/js/**/*.js"
+  # Path to images
+  images:
+    - "assets/img/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "node_modules"
@@ -17,5 +24,8 @@ PATHS:
   entries:
     - "assets/js/app.js"
   
-  cssfile:
-    - "./dist/css/app.css"
+  cssfile: "./dist/css/app.css"
+
+  sasslint: "./.sass-lint.yml"
+
+  eslint: "./.eslintrc"

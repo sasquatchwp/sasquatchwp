@@ -25,9 +25,9 @@ Env::init();
  * Use Dotenv to set required environment variables and load .env file in root
  */
 $dotenv = new Dotenv\Dotenv($root_dir);
-if (file_exists($root_dir . '/.env')) {
-    $dotenv->load();
-    $dotenv->required(['DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL']);
+if ( file_exists($root_dir . '/.env') ) {
+	$dotenv->load();
+	$dotenv->required([ 'DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL' ]);
 }
 
 /**
@@ -77,13 +77,13 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
  */
 Config::define('AUTOMATIC_UPDATER_DISABLED', true);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
-// Disable the plugin and theme file editor in the admin
+// Disable the plugin and theme file editor in the admin.
 Config::define('DISALLOW_FILE_EDIT', true);
-// Disable plugin and theme updates and installation from the admin
+// Disable plugin and theme updates and installation from the admin.
 Config::define('DISALLOW_FILE_MODS', true);
-// Autosave interval
-Config::define('AUTOSAVE_INTERVAL',300);
-// Revisions
+// Autosave interval.
+Config::define('AUTOSAVE_INTERVAL', 300);
+// Revisions.
 Config::define('WP_POST_REVISIONS', 3);
 
 /**
@@ -95,8 +95,8 @@ ini_set('display_errors', 0);
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
-if (file_exists($env_config)) {
-    require_once $env_config;
+if ( file_exists($env_config) ) {
+	require_once $env_config;
 }
 
 Config::apply();
@@ -104,10 +104,10 @@ Config::apply();
 /**
  * Bootstrap WordPress
  */
-if (!defined('ABSPATH')) {
-    define('ABSPATH', $webroot_dir . '/wp/');
+if ( ! defined('ABSPATH') ) {
+	define('ABSPATH', $webroot_dir . '/wp/');
 }
 
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
-    $_SERVER['HTTPS']='on';
+if ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false ) {
+	$_SERVER['HTTPS'] = 'on';
 }

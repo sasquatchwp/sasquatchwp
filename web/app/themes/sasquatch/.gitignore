@@ -6,3 +6,4 @@ dist
 *.swp
 vendor
 composer.lock
+user-config.yml
