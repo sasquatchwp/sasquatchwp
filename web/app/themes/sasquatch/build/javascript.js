@@ -41,6 +41,7 @@ export function javascript() {
       .on('error', e => { console.log(e); })
     ))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+    .pipe($.if(PRODUCTION, $.stripDebug()))
     .pipe(gulp.dest(PATHS.dist + '/js'));
 
 }
