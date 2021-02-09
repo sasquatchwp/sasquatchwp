@@ -98,4 +98,4 @@ Example
 - https://wrc.net.pl - biggest racing site in Poland
 - https://liberte.pl - selection of best articles from around the world
 
-If you are using SasquatchWP contact me at m.palmowski@freshpixels.pl. 
+If you are using SasquatchWP contact me at m.palmowski@freshpixels.pl.
