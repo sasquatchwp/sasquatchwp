@@ -30,7 +30,7 @@ and a little magic to keep it all together.
 Remember to change `DEVURL` in `web/app/themes/{theme_name}/config.yml`
 
 ## .htaccess
-This is universal `.htaccess` you can use fot shared hosting.
+This is universal `.htaccess` you can use for shared hosting.
 
 Example for domains (domain.test)
 ```
